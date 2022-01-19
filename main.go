@@ -23,12 +23,13 @@ func main() {
 
 	now := time.Now()
 	urls, err := scriptish.ExecPipeline(
+		scriptish.TestFilepathExists(args.File),
 		scriptish.CatFile(args.File),
 		scriptish.Exec("httprobe", "-c", "30"),
 	).Strings()
 
 	if err != nil {
-		fmt.Fprintf(os.Stderr, err.Error())
+		fmt.Fprintf(os.Stderr, "%s\n", err.Error())
 		return
 	}
 
