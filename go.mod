@@ -1,4 +1,4 @@
-module github.com/bin3xishatt/godirx
+module github.com/bin3xish477/godirx
 
 go 1.17
 
