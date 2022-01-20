@@ -11,7 +11,7 @@ import (
 )
 
 var args struct {
-	File     string `arg:"-f,--file" help:"file containing URLs to scan"`
+	File     string `arg:"-f,--file" help:"file containing IPs to scan"`
 	WordList string `arg:"-w,--wordlist,required" help:"file path to wordlist"`
 	Ports    string `arg:"-p,--ports" help:"ports to pass to httprobe"`
 	Threads  string `default:"15" arg:"-t,--threads" help:"threads to use with gobuster"`
