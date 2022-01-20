@@ -5,6 +5,12 @@ A wrapper around "gobuster dir"
 `godirx` depends on tomnomnom's `httprobe` and OJ Reeves's `gobuster` tools
 
 ```
-go install github.com/tomnomnom/httprobe@latest
-go install github.com/OJ/gobuster/v3@latest
+go install -v github.com/tomnomnom/httprobe@latest
+go install -v github.com/OJ/gobuster/v3@latest
+```
+
+### Installation
+
+```
+go install -v github.com/bin3xish477/godirx
 ```
