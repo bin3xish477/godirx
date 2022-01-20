@@ -36,8 +36,16 @@ func main() {
 	for _, url := range urls {
 		fmt.Printf("===> %s\n", url)
 		cmd := exec.Command(
-			"gobuster", "dir", "--quiet", "--useragent", "noleak", "--expanded", "--follow-redirect",
-			"--url", url, "--wordlist", args.WordList, "--threads", args.Threads,
+			"gobuster",
+			"dir",
+			"--quiet",
+			"--useragent", "noleak",
+			"--expanded",
+			"--follow-redirect",
+			"--no-tls-validation",
+			"--url", url,
+			"--wordlist", args.WordList,
+			"--threads", args.Threads,
 			"--status-codes-blacklist", args.BadCodes,
 		)
 		cmd.Stdout = os.Stdout
