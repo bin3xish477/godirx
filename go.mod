@@ -1,4 +1,4 @@
-module github.com/bin3xishatt/gobusterx
+module github.com/bin3xishatt/godirx
 
 go 1.17
 
